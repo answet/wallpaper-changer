@@ -2,7 +2,6 @@
 folder_project="$HOME/Projects/wallpaper-changer"
 folder_wallpapers="$HOME/Pictures/Wallpapers/favs"
 
-quantity=$(ls -1 "$folder_wallpapers" | wc -l)
 current=$(cat "$folder_project"/number_wallpaper.txt)
 
 UpdateWallpapers() {
@@ -10,6 +9,8 @@ UpdateWallpapers() {
 }
 
 ChangeWallpaper() {
+    quantity=$(ls -1 "$folder_wallpapers" | wc -l)
+
     if (($1 == 0)); then
 	    new=$((current - 1))
     elif (($1 == 1)); then
