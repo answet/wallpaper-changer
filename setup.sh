@@ -12,7 +12,7 @@ color_script="$project_dir/colors-wal.py"
 
 sxhkdrc="$HOME/.config/sxhkd/sxhkdrc"
 binding="super + alt + {Left,Right,Up}"
-commands_bind="     $HOME/Projects/wallpaper-changer/changer.sh {0,1,2}"
+commands_bind="     $project_dir/changer.sh {0,1,2}"
 
 echo "📁 Project directory: $project_dir"
 echo "🖼️ Wallpaper directory: $wallpaper_dir"
