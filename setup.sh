@@ -2,7 +2,6 @@
 
 # === Configuration ===
 project_dir="$(dirname "$(realpath "$0")")"
-wallpaper_dir="$HOME/Pictures/Wallpapers/"
 
 current_file="$project_dir/current_wallpaper.txt"
 wallpapers_file="$project_dir/wallpapers.txt"
@@ -15,28 +14,16 @@ binding="super + alt + {Left,Right,Up}"
 commands_bind="     $project_dir/changer.sh {0,1,2}"
 
 echo "📁 Project directory: $project_dir"
-echo "🖼️ Wallpaper directory: $wallpaper_dir"
 
-# === Generate wallpapers.txt ===
-if [[ -d "$wallpaper_dir" ]]; then
-    echo "📄 Generating wallpapers.txt..."
-    touch "$wallpapers_file"
-else
-    echo "❌ Wallpaper directory not found: $wallpaper_dir"
-    exit 1
-fi
+# === Generate .txt files ===
+echo "📄 Generating wallpapers.txt..."
+touch "$wallpapers_file"
 
-# === Generate quantity.txt ===
-echo "📊 Counting wallpapers..."
+echo "📊 Generating quantity.txt..."
 touch "$quantity_file"
 
-# === Create current_wallpaper.txt if it doesn't exist ===
-if [[ ! -f "$current_file" ]]; then
-    echo "🆕 Creating current_wallpaper.txt with initial value 0"
-    echo 1 > "$current_file"
-else
-    echo "✔️ current_wallpaper.txt already exists, keeping current value"
-fi
+echo "🆕 Creating current_wallpaper.txt with initial value 0"
+echo 0 > "$current_file"
 
 # === Make changer.sh and colores-wal.py executable ===
 echo ""
