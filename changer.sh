@@ -1,9 +1,7 @@
 #!/bin/bash
 
-actual_folder=" "
-
 folder_project="$(dirname "$(realpath "$0")")"
-folder_wallpapers="$HOME/Pictures/Wallpapers/$actual_folder"
+folder_wallpapers="$HOME/Pictures/Wallpapers"
 
 current=$(cat "$folder_project"/current_wallpaper.txt)
 
