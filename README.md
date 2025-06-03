@@ -11,6 +11,6 @@ The default path is `~/Pictures/Wallpapers`. To change it, modify the following 
 ```
 #!/bin/bash
 ...    
-folder_wallpapers="$HOME/Pictures/Wallpapers/"   # <-- modify this variable
+folder_wallpapers="$HOME/Pictures/Wallpapers"   # <-- modify this variable
 ...
 ```
