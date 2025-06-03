@@ -18,18 +18,18 @@ if os.path.exists(wal_colors_file):
             for index, line in enumerate(wal_file):
                 polybar_file.write(f'color{index} = {line}')
 else:
-    notify-send "Wal colors file not found."
+    os.system("notify-send 'Wal colors file not found.'")
 
 
 # Move Vim colorscheme
 if os.path.exists(vim_colors_src):
     os.rename(vim_colors_src, vim_colors_dst)
 else:
-    notify-send "Vim wal colors file not found."
+    os.system("notify-send 'Vim wal colors file not found.'")
 
 
 # Move Rofi theme
 if os.path.exists(rofi_colors_src):
     os.rename(rofi_colors_src, rofi_colors_dst)
 else:
-    notify-send "Rofi wal theme not found."
+    os.system("notify-send 'Rofi wal theme not found.'")
